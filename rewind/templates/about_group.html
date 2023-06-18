@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}О группе{% endblock %}
+
+{% block content %}
+    <div class="mainInfo_news">
+        {{ group.text|safe }}
+        <img class="p-img" src="{{ group.image.url }}"/>
+    </div>
+{% endblock %}

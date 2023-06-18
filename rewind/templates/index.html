@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Новости{% endblock %}
+
+
+{% block content %}
+    <div class="mainInfo_news">
+            {% for new in news %}
+            <div class="mainInfo_post">
+                <div class="news_block">
+                    <div class="news_text">
+                        <p class="news-title">{{ new.text|safe }}</p>
+                        <a class="news-href" href="https://www.youtube.com/channel/UCe-Du7YVgM4b7GtF0PFgu2Q?view_as=subscriber">YouTube: vk.cc/augQgs</a>
+                        <a class="news-href" href="https://www.instagram.com/peremotka_band/">Instagram: vk.cc/augQUY</a>
+                        <a class="news-href" href="https://www.spotify.com/int/why-not-available/">Spotify: vk.cc/awYFj9</a>
+                        <a class="news-href" href="https://music.yandex.ru/artist/5373532">Яндекс.Музыка: vk.cc/augR7n</a>
+                        <a class="news-href" href="https://peremotka.bandcamp.com/">Bandcamp: vk.cc/augRtK</a>
+                    </div>
+                    <img class="news_img-2" src="{{ new.image }}" />
+                </div>
+            </div>
+        {% endfor %}
+
+        </div>
+{<br>}
+{% endblock %}
+

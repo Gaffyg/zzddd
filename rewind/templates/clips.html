@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Клипы{% endblock %}
+
+
+{% block content %}
+    <div class="mainInfo_news-video">
+        {% for clip in clips %}
+            <a class="mainInfo_video" href="{{ clip.link }}">
+                <img class="v_img" src="{{ clip.image }}"/>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

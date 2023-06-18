@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Концерты{% endblock %}
+
+
+{% block content %}
+    <div class="mainInfo_news-ticket">
+        {% for concert in concerts %}
+            <div class="mainInfo_ticket">
+                <p class="dateTicket">{{ concert.date }} {{ concert.city }} /{{ concert.place }}</p>
+                <button><a href="{{ concert.get_buy_url }}">Бронировать билет</a></button>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}

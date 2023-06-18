@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mainInfo_news-ticket">
+        {% if messege %}
+            <p class="dateTicket">{{ messege }}</p>
+        {% else %}
+            <form method="post">
+                {% csrf_token %}
+
+                <p>Цена билета: {{ model.price }}</p>
+                <p>Билетов на концерт осталось: {{ model.count }}</p>
+
+                {{ form }}
+                <button type="submit">Бронировать</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}
